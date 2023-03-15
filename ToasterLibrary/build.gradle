@@ -5,6 +5,9 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'com.carma.toasterlibrary'
+version = '1.0'
+
 android {
     namespace 'com.carma.toasterlibrary'
     compileSdk 33
@@ -42,13 +45,20 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.android.tools.build:gradle:7.4.2'
+    implementation 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    
+
+
+
 }
 afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.carma'
+                groupId = 'com.carma.toasterlibrary'
                 artifactId = 'Toaster-Library'
                 version = "0.8.0"
 
