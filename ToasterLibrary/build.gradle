@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.carma.toasterlibrary'
-version = '0.9.3'
+version = '0.9.4'
 
 android {
     namespace 'com.carma.toasterlibrary'
@@ -46,8 +46,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation 'com.android.tools.build:gradle:7.4.2'
-    implementation 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    //implementation 'com.android.tools.build:gradle:7.4.2'
+    //implementation 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
 
 
