@@ -48,7 +48,7 @@ dependencies {
 
     implementation 'com.android.tools.build:gradle:7.4.2'
     implementation 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-    
+
 
 
 
@@ -60,7 +60,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.carma.toasterlibrary'
                 artifactId = 'Toaster-Library'
-                version = "0.8.0"
+                version = "0.9.0"
 
                 pom {
                     description = 'A description of my library'
