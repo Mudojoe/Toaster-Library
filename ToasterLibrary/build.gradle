@@ -2,8 +2,9 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
-apply plugin: 'maven-publish'
+
 android {
     namespace 'com.carma.toasterlibrary'
     compileSdk 33
@@ -23,11 +24,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        //sourceCompatibility JavaVersion.VERSION_1_8
+        //targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
@@ -46,9 +49,11 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'com.carma'
-            artifactId = 'sample'
-            version = "0.3.0"
-            //from components.
+            artifactId = 'library'
+            version = "0.4.0"
+            if (project.plugins.hasPlugin('java')) {
+                from components.java
+            }
 
             pom {
                 description = 'A description of my library'
