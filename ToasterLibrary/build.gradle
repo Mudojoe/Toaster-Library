@@ -54,7 +54,6 @@ publishing {
             if (project.plugins.hasPlugin('java')) {
                 from components.java
             }
-
             pom {
                 description = 'A description of my library'
             }
