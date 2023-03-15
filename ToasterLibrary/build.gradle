@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.carma'
                 artifactId = 'Toaster-Library'
-                version = "0.7.0"
+                version = "0.8.0"
 
                 pom {
                     description = 'A description of my library'
