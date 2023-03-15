@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.carma.toasterlibrary'
-version = '1.0'
+version = '0.9.1'
 
 android {
     namespace 'com.carma.toasterlibrary'
@@ -47,7 +47,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'com.android.tools.build:gradle:7.4.2'
-    implementation 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    implementation 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
 
 
@@ -60,7 +60,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.carma.toasterlibrary'
                 artifactId = 'Toaster-Library'
-                version = "0.9.0"
+                version = "0.9.1"
 
                 pom {
                     description = 'A description of my library'
