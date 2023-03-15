@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.carma.toasterlibrary'
-version = '0.9.1'
+version = '0.9.3'
 
 android {
     namespace 'com.carma.toasterlibrary'
