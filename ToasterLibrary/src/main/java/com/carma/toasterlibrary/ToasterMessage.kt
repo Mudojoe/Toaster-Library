@@ -1,25 +1,25 @@
 package com.carma.toasterlibrary
 
 
+import android.content.Context
 import android.util.Log
-import kotlinx.coroutines.delay
+import android.widget.Toast
 
 
-enum class ReturnStatus {
-    OK, ERROR
+class ToasterMessage {
+    companion object {
+        fun show(context: Context, message: String, duration: Int = Toast.LENGTH_SHORT) {
+            Toast.makeText(context, message, duration).show()
+        }
+    }
 }
 
 class StartAR {
     companion object {
-        private var errorCode = "UNKNOWN ERROR"
-        suspend fun start() : String {
-            delay(5000)
-            var status = ReturnStatus.OK
+        fun start() : String {
+
             Log.d("StartAR","Start")
-            return if (status == ReturnStatus.OK)
-                "OK"
-            else
-                "ERROR : $errorCode"
+            return "OK"
         }
     }
 }
