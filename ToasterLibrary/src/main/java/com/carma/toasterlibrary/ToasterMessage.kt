@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import kotlinx.coroutines.delay
+import java.lang.Thread.sleep
 
 /*
 class ToasterMessage {
@@ -22,8 +23,9 @@ class StartAR {
     companion object {
         var status = STATUS.OK
         var ERROR_CODE = "UNKOWN_ERROR"
-        suspend fun start() : String {
-            delay(5000)
+
+        fun start() : String {
+            sleep(5000)
             Log.d("StartAR","Start")
             return if (status == STATUS.OK) {
                 "OK"
