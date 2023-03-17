@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.carma.toasterlibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application>
+
+        <!-- "AR Optional" app, contains non-AR features that can be used when
+             "Google Play Services for AR" (ARCore) is not available. -->
+
+        <meta-data android:name="com.google.ar.core" android:value="optional" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <!-- This entry makes SomeInitializer discoverable. -->
+            <meta-data  android:name="com.carma.toasterlibrary.CheckARManagerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
 
 </manifest>

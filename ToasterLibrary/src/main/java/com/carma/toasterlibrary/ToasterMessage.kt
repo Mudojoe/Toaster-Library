@@ -1,21 +1,8 @@
 package com.carma.toasterlibrary
 
 
-import android.content.Context
-import android.util.Log
-import android.widget.Toast
-import kotlinx.coroutines.delay
-import java.lang.Thread.sleep
 
 /*
-class ToasterMessage {
-    companion object {
-        fun show(context: Context, message: String, duration: Int = Toast.LENGTH_SHORT) {
-            Toast.makeText(context, message, duration).show()
-        }
-    }
-}
-*/
 class StartAR {
     enum class STATUS {
         OK, ERROR
@@ -35,3 +22,4 @@ class StartAR {
         }
     }
 }
+*/
