@@ -14,8 +14,11 @@ class CheckARCore (){
 
     fun maybeEnableArButton() :String {
         var returnMsg  :String
+        val myContextSTR = ARManager.myContext.toString()
+        Log.d("maybeEnableArButton", "myContext = $myContextSTR")
         val availability = ArCoreApk.getInstance().checkAvailability(ARManager.myContext)
         if (availability.isTransient) {
+            Log.d("maybeEnableArButton", "availability.isTransient")
             // Continue to query availability at 5Hz while compatibility is checked in the background.
             Handler().postDelayed({
                 maybeEnableArButton()
